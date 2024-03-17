@@ -131,7 +131,7 @@ final class ExtendedQueryContext {
             return .plsql(promise)
         case "SELECT", "WITH":
             return .query(promise)
-        case "INSERT", "UPDATE", "DELETE", "MERGE":
+        case "INSERT", "UPDATE", "DELETE", "MERGE", "COMMIT", "ROLLBACK":
             return .dml(promise)
         case "CREATE", "ALTER", "DROP", "TRUNCATE":
             return .ddl(promise)
